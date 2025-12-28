@@ -8,7 +8,7 @@
 <ul>
     <li>Understand how BGP establishes routing between autonomous systems.</li>
     <li>Configure eBGP peering across WAN links.</li>
-    <li>Advertise and filter routes using BGP policies and prefix lists.</li>
+    <li>Advertise and filter routes using BGP policies and prefix lists (WILL ADD LATER ON).</li>
     <li>Observe path selection and routing updates in a multi-AS environment.</li>
     <li>Gain experience with Cisco IOS BGP configuration and troubleshooting.</li>
 </ul>
