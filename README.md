@@ -27,7 +27,7 @@
 
 <img width="1407" height="444" alt="BGP full pic" src="https://github.com/user-attachments/assets/05fb5fab-215e-4467-8968-70e3c74f2688" />
 
-<div class="img-caption">High-level topology showing Site-A, ISP, and Site-B with BGP peerings.</div>
+<div class="img-caption">Basic-Level topology showing Site-A, Site-B, and Site-C with BGP peerings.</div>
 
 <h2>How the BGP Lab Works</h2>
 <p>This lab demonstrates how BGP connects multiple sites in a hub-and-spoke topology and shares routing information:</p>
