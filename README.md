@@ -30,13 +30,17 @@
 <div class="img-caption">High-level topology showing Site-A, ISP, and Site-B with BGP peerings.</div>
 
 <h2>How the BGP Lab Works</h2>
-<p>This lab shows how BGP connects multiple sites and shares routes between them:</p>
+<p>This lab demonstrates how BGP connects multiple sites in a hub-and-spoke topology and shares routing information:</p>
 <ul>
-    <li><strong>Setting up neighbors:</strong> Each router tells the others “I’m your BGP neighbor” so they can exchange routes. This uses TCP port 179.</li>
-    <li><strong>Sharing routes:</strong> Each site tells the others which networks it can reach (its LANs). BGP decides the best path for traffic.</li>
-    <li><strong>Controlling routes:</strong> You can choose which routes to share or block using simple rules (prefix-lists or route-maps).</li>
-    <li><strong>Sending traffic:</strong> Once routes are shared, data between Site-A and Site-B goes through Site-C using the best path.</li>
+    <li><strong>Forming neighbor sessions:</strong> Each router establishes a BGP session with its peers (neighbors) over TCP port 179 to exchange routing information.</li>
+    <li><strong>Path-vector protocol:</strong> BGP is a path-vector protocol, meaning it chooses routes based on policies and path attributes (like AS path) rather than the shortest path.</li>
+    <li><strong>Advertising networks:</strong> Each site announces the networks it can reach (its LAN and WAN subnets). BGP uses this information to determine the best path for traffic.</li>
+    <li><strong>Applying routing policies:</strong> You can control which routes are shared or accepted using prefix-lists, route-maps, or filters.</li>
+    <li><strong>Forwarding traffic:</strong> Once routes are learned, traffic between Site-A and Site-B flows through Site-C following the best path as determined by BGP policies and path selection rules.</li>
+    <li><strong>Use case:</strong> BGP is mainly used for ISP connections, external WANs, and multi-AS networks where scalability, policy control, and inter-AS communication are needed.</li>
+    <li><strong>Convergence:</strong> BGP convergence is slower than internal protocols like OSPF, because route updates propagate through neighbors rather than the full network topology.</li>
 </ul>
+
 
 <h2>Testing & Validation</h2>
 
